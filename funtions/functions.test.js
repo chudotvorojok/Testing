@@ -1,31 +1,16 @@
-const {isSimple, getBiggestNumber, check} = require('./funtions')
+const {getResult} = require('./funtions')
 
-describe('Test of isSimple function', () => {
-    test('10', () => {
-        expect(isSimple(10)).toBe(false)
+describe('Test of getResult function', () => {
+    test('[50,10,14],[50,10,13],[50,12,13]', () => {
+        let firstArr=[50,10,14]
+        let secondArr=[50,10,13]
+        let thirdArr=[50,12,13]
+        expect(getResult(firstArr,secondArr,thirdArr)).toBe[10]
     })
-    test('7', () => {
-        expect(isSimple(7)).toBe(true)
-    })
-})
-
-describe('Test of getBiggestNumber function', () => {
-    test('195', () => {
-        expect(getBiggestNumber(195)).toBe(9)
-    })
-    test('1', () => {
-        expect(getBiggestNumber(1)).toBe(1)
-    })
-    test('999', () => {
-        expect(getBiggestNumber(9)).toBe(9)
-    })
-})
-
-describe('Test of check function', () => {
-    test('195 >', () => {
-        expect(check(195, true)).toBe(true)
-    })
-    test('195 <', () => {
-        expect(check(195, false)).toBe(false)
+    test('[50,10,13],[50,10,13],[50,10,13]', () => {
+        let firstArr=[50,10,13]
+        let secondArr=[50,10,13]
+        let thirdArr=[50,10,13]
+        expect(getResult(firstArr,secondArr,thirdArr)).toBe[null]
     })
 })
